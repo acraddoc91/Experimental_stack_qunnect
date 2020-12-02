@@ -41,7 +41,7 @@ def form_gaussian(m, fwhm):
             gaussian.append(gauss(x, std=s, mean=m))
     # gaussian = gaussian / max(gaussian)
     # Sandy Adjustment for AO driver
-    gaussian = 2*(gaussian / max(gaussian))-1
+    gaussian = 2*np.array(gaussian / max(gaussian))-1
     return gaussian
 
 
